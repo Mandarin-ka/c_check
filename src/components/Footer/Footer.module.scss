@@ -1,0 +1,107 @@
+.footer {
+  position: relative;
+  width: 100%;
+  border-top: 2px solid $footer-line-color;
+  padding: 54px 0 80px;
+  box-sizing: border-box;
+
+  &.dark {
+    border-color: $dark-footer-line-color;
+  }
+}
+
+.wrapper {
+  padding: 0 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 144px;
+  width: 100%;
+}
+
+.license {
+  position: absolute;
+  font-size: 24px;
+  color: $license-text-color;
+  font-weight: 600;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+
+  &.dark {
+    color: $dark-license-text-color;
+  }
+}
+
+.docs {
+  display: flex;
+}
+
+.refs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 293px;
+}
+
+.ref {
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 3px 5px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+    bottom: 0;
+    left: -100%;
+    transition: 0.4s;
+  }
+
+  &:hover::after {
+    left: 0;
+  }
+
+  &.dark {
+    color: $dark-text-color;
+  }
+
+  &.dark::after {
+    background-color: $white;
+  }
+}
+
+.link {
+  width: 16px;
+}
+
+.img {
+  width: 100%;
+  transition: 0.1s;
+}
+
+.fb:hover {
+  fill: #1877f2;
+}
+
+.twitter:hover {
+  fill: #1d9bf0;
+}
+
+.inst:hover {
+  fill: #b53694;
+}
+
+.linkedin:hover {
+  fill: #007ebb;
+}
